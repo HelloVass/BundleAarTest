@@ -25,10 +25,22 @@ android {
             )
         }
     }
+
+    flavorDimensionList += "version"
+    productFlavors {
+        create("demo") {
+            dimension = "version"
+        }
+        create("full") {
+            dimension = "version"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
